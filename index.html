@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module">
+        import App from "./src/App.js";
+        App.main();
+    </script>
+    <title>Combiner les événements JS avec les animations CSS</title>
+</head>
+
+<body>
+    <div id="interface">
+        <header>
+            <h1>Combiner les événements JS avec les animations CSS</h1>
+        </header>
+        <div class="body" id="app">
+            <div id="exemples">
+
+                <!-- Exemple 1: Transition avec ajout de classe -->
+                <div class="exemple">
+                    <h2>Exemple 1: Transition avec ajout de classe</h2>
+                    <button id="btnDemarrer">Démarrer l'animation</button>
+                    <div class="boite" id="boite-animee" style="background-color: red;"></div>
+                </div>
+    
+                <!-- Exemple 2: Animation par keyframes -->
+                <div class="exemple">
+                    <h2>Exemple 2: Animation par keyframes</h2>
+                    <div class="boite boite-color"></div>
+                </div>
+    
+                <!-- Exemple 3: Animation au survol -->
+                <div class="exemple">
+                    <h2>Exemple 3: Animation au survol</h2>
+                    <div class="boite boite-scale" id="boite-survol" style="background-color: blue;"></div>
+                </div>
+    
+                <!-- Exemple 4: Animation via JS avec requestAnimationFrame -->
+                <div class="exemple">
+                    <h2>Exemple 4: Animation via JS avec requestAnimationFrame</h2>
+                    <div class="boite boite-rotate" id="boite-rotate"></div>
+                </div>
+            </div>
+        </div>
+        <footer><span>&copy; Web 3 : Dynamique</span><strong>Combiner les événements JS avec les animations CSS</strong></footer>
+    </div>
+</body>
+
+</html>

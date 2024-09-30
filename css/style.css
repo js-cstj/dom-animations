@@ -1,0 +1,166 @@
+@import 'polices/professional-business.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
+:root {
+  --h: 204;
+  --s: 50%;
+  --l: 30%;
+  --d: 80%;
+  --font-family: "Roboto", sans-serif;
+  --font-titre: "Roboto Slab", serif;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+body {
+  height: 100vh;
+}
+
+h1,
+h3,
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2,
+h4,
+th,
+legend,
+caption,
+label,
+figcaption,
+.subheading {
+  font-family: var(--font-subheading);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#interface, .interface {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+#interface > header, #interface > footer, .interface > header, .interface > footer {
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h), var(--s), 30%);
+  color: hsl(var(--h), var(--s), 100%);
+  display: flex;
+  justify-content: space-between;
+}
+#interface > header, .interface > header {
+  order: -1000;
+}
+#interface > nav, .interface > nav {
+  background-color: hsl(var(--h), var(--s), 35%);
+  color: hsl(var(--h), var(--s), 100%);
+}
+#interface > footer, .interface > footer {
+  order: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  display: flex;
+}
+nav ul li a {
+  flex-grow: 1;
+  display: flex;
+  padding: 6px 12px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  background: #333;
+  color: #fff;
+}
+
+#app {
+  background-color: hsl(var(--h), var(--s), var(--d));
+  padding: 1em;
+}
+
+#exemples {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1em;
+  align-self: start;
+}
+
+.exemple {
+  border: hsl(var(--h), var(--s), var(--l)) 1px solid;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2em 1em -1em rgba(0, 0, 0, 0.2);
+}
+
+#btnDemarrer {
+  padding: 10px 20px;
+  background-color: hsl(var(--h), var(--s), var(--l));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boite {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+/* Exemple 1: Transition avec ajout de classe */
+.anim-droite {
+  transform: translateX(200px);
+  transition: transform 1s ease;
+}
+
+/* Exemple 2: Animation par keyframes */
+@keyframes anim-couleur {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+.boite-color {
+  animation-name: anim-couleur;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Exemple 3: Animation au survol */
+.boite-scale {
+  transition: transform 0.5s;
+}
+
+.anim-scale {
+  transform: scale(1.5);
+}
+
+/* Exemple 4: Animation via JS avec requestAnimationFrame */
+.boite-rotate {
+  background-color: purple;
+}

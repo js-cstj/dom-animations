@@ -1,0 +1,71 @@
+#exemples {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	gap: 1em;
+	align-self: start;
+}
+
+.exemple {
+	border: hsl(var(--h), var(--s), var(--l)) 1px solid;
+	border-radius: 5px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2em 1em -1em #0003;
+}
+
+#btnDemarrer {
+	padding: 10px 20px;
+	background-color: hsl(var(--h), var(--s), var(--l));
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.boite {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
+
+/* Exemple 1: Transition avec ajout de classe */
+.anim-droite {
+	transform: translateX(200px);
+	transition: transform 1s ease;
+}
+
+/* Exemple 2: Animation par keyframes */
+@keyframes anim-couleur {
+	0% {
+		background-color: red;
+	}
+
+	50% {
+		background-color: yellow;
+	}
+
+	100% {
+		background-color: green;
+	}
+}
+
+.boite-color {
+	animation-name: anim-couleur;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	// Raccourci = animation: anim-couleur 2s infinite;
+}
+
+/* Exemple 3: Animation au survol */
+.boite-scale {
+	transition: transform 0.5s;
+}
+
+.anim-scale {
+	transform: scale(1.5);
+}
+
+/* Exemple 4: Animation via JS avec requestAnimationFrame */
+.boite-rotate {
+	background-color: purple;
+}
